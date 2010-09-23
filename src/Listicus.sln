@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listicus.Web", "Listicus.Web\Listicus.Web.csproj", "{C4E1D0BA-8C1E-4E5E-B6A4-6986F50B5A04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listicus.Tests", "Listicus.Tests\Listicus.Tests.csproj", "{5B048DD7-8A22-4A7A-A5E5-2080603FB49E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listicus.Core", "Listicus.Core\Listicus.Core.csproj", "{1425C38C-73C5-4ECA-92A5-5A2544212E04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listicus.Service.WCFREST", "Listicus.Service.WCFREST\Listicus.Service.WCFREST.csproj", "{EF53151A-B3E7-4733-B208-ED0E95A084D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4E1D0BA-8C1E-4E5E-B6A4-6986F50B5A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E1D0BA-8C1E-4E5E-B6A4-6986F50B5A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E1D0BA-8C1E-4E5E-B6A4-6986F50B5A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E1D0BA-8C1E-4E5E-B6A4-6986F50B5A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B048DD7-8A22-4A7A-A5E5-2080603FB49E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B048DD7-8A22-4A7A-A5E5-2080603FB49E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B048DD7-8A22-4A7A-A5E5-2080603FB49E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B048DD7-8A22-4A7A-A5E5-2080603FB49E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1425C38C-73C5-4ECA-92A5-5A2544212E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1425C38C-73C5-4ECA-92A5-5A2544212E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1425C38C-73C5-4ECA-92A5-5A2544212E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1425C38C-73C5-4ECA-92A5-5A2544212E04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF53151A-B3E7-4733-B208-ED0E95A084D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF53151A-B3E7-4733-B208-ED0E95A084D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF53151A-B3E7-4733-B208-ED0E95A084D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF53151A-B3E7-4733-B208-ED0E95A084D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
