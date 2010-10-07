@@ -1,0 +1,7 @@
+﻿@inherits System.Web.Mvc.WebViewPage<Listicus.Web.Models.LinkModel>
+    <li class="list-form-item">
+        @Html.TextBoxFor(model => model.Title, new {@class="left"})
+        @Html.TextBoxFor(model => model.Url, new {@class="right"})
+        @Html.ValidationMessageFor(model => model.Title)
+        @Html.ValidationMessageFor(model => model.Url)
+    </li>

@@ -1,4 +1,4 @@
-﻿@inherits System.Web.Mvc.WebViewPage
+﻿@inherits System.Web.Mvc.WebViewPage<Listicus.Web.Models.ListModel>
 
 @{
     View.Title = "Home Page";
@@ -6,6 +6,28 @@
 }
 
 <h2>@View.Message</h2>
+
+@using(Html.BeginForm()){
+        @Html.ValidationSummary(true)
+
+    <div>
+        <fieldset class="create-list-form">
+            <legend>Create a new list</legend>
+
+            <ul>
+                <li class="list-form-header">
+                    <span class="left">Title</span>
+                    <span class="right">URL</span>
+                </li>
+                @Html.EditorFor(m=>m.Links)
+            </ul>
+            <div class="clear" />
+            <p>
+                @Html.LabelFor(m=>m.Name) @Html.TextBoxFor(m=>m.Name) <input type="submit" value="Create List!" />
+            </p>
+        </fieldset>
+    </div>
+}
 <p>
     To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
 </p>

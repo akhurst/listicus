@@ -34,9 +34,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Entity.CTP, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Mvc">
+      <HintPath>..\..\lib\MVCContrib\Microsoft.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib">
+      <HintPath>..\..\lib\MVCContrib\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="RouteDebug">
+      <HintPath>..\..\lib\RouteDebug.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -55,15 +67,28 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\API\APIAreaRegistration.cs" />
+    <Compile Include="Areas\API\Controllers\ListController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ListController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Framework\CustomRouteHandler.cs" />
+    <Compile Include="Framework\ObjectFilter.cs" />
+    <Compile Include="Framework\ObjectResult.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ListMapper.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\LinkModel.cs" />
+    <Compile Include="Models\ListModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Listicus.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -97,13 +122,21 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Content Include="Areas\API\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Listicus.Core\Listicus.Core.csproj">
       <Project>{1425C38C-73C5-4ECA-92A5-5A2544212E04}</Project>
       <Name>Listicus.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\API\Models\" />
+    <Folder Include="Areas\API\Views\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\List\Index.cshtml" />
+    <None Include="Views\Shared\EditorTemplates\LinkModel.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
@@ -122,7 +155,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>4734</DevelopmentServerPort>
+          <DevelopmentServerPort>1694</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

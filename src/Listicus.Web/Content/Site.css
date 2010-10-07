@@ -342,3 +342,34 @@ div#title
 {
     width: 6em;
 }
+
+/* Home page styles
+----------------------------------------------------------*/
+fieldset.create-list-form
+{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.create-list-form ul
+{
+    list-style: none;
+}
+
+.list-form-item
+{
+    clear: both;
+}
+
+.create-list-form .left
+{
+    float:left;
+    width: 200px;
+}
+
+.create-list-form .right
+{
+    float: left;
+    width: 300px;
+}
